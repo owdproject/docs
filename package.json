@@ -12,19 +12,7 @@
     "name": "dxlliv",
     "url": "https://github.com/dxlliv"
   },
-  "scripts": {
-    "build": "nuxt generate",
-    "dev": "nuxt dev --host",
-    "generate": "nuxt generate --dev",
-    "postinstall": "nuxt prepare",
-    "preview": "nuxt preview"
-  },
-  "devDependencies": {
-    "@nuxt/content": "^3.3.0",
-    "@owdproject/core": "^3.0.0-alpha.2",
-    "owd-app-about": "github:owdproject/app-about",
-    "owd-app-todo": "github:owdproject/app-todo",
-    "owd-app-xterm": "github:owdproject/app-xterm",
-    "owd-app-wasmboy": "github:owdproject/app-wasmboy"
+  "dependencies": {
+    "@nuxt/content": "^3.3.0"
   }
 }
