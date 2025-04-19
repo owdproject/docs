@@ -18,10 +18,9 @@ Define the module in your `nuxt.config.ts`:
 export default defineNuxtConfig({
     modules: [
         '@owdproject/docs',
-        // make sure to define @owdproject/core above @owdproject/core
         '@owdproject/core'
     ]
-});
+})
 ```
 
 ## Features
