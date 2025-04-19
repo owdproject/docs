@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import {useTemplateRef} from "vue"
+import {computed} from "@vue/reactivity"
+import {useApplicationManager} from "@owdproject/core/runtime/composables/useApplicationManager"
+
 const applicationManager = useApplicationManager()
 const menu = useTemplateRef('menu')
 
