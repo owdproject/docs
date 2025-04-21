@@ -1,6 +1,6 @@
 {
   "name": "@owdproject/docs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Open Web Desktop docs",
   "homepage": "https://github.com/owdproject/docs#readme",
   "repository": {
@@ -13,6 +13,7 @@
     "url": "https://github.com/dxlliv"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0"
+    "@nuxt/content": "^3.3.0",
+    "nuxt-toc": "^2.7.2"
   }
 }
