@@ -5,12 +5,16 @@ const menuMiddle = [
     items: [
       {
         label: "Introduction",
+        url: '/docs/introduction',
       },
       {
         label: "Getting Started",
+        url: '/docs/installation',
       },
       {
         label: "Extend Your OS",
+        url: 'https://github.com/topics/owd-modules',
+        target: '_blank',
       },
     ]
   },
@@ -52,7 +56,9 @@ const menuMiddle = [
         <div class="flex flex-row">
           <div class="flex flex-1 items-center">
 
-            <DocsHeaderLogo/>
+            <nuxt-link to="/docs">
+              <DocsHeaderLogo/>
+            </nuxt-link>
 
           </div>
           <div class="flex grid justify-end">
@@ -78,7 +84,7 @@ const menuMiddle = [
 
 <style lang="scss">
 .owd-docs-header {
-  height: 72px;
+  height: 72px;;
 
   &__inner {
    /*
@@ -129,6 +135,14 @@ const menuMiddle = [
 
   .p-menubar-submenu {
     margin-top: 12px;
+  }
+}
+
+.owd-docs-wrapper:not(.owd-docs-wrapper--home) {
+  .owd-docs-header {
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 20px;
   }
 }
 </style>

@@ -47,100 +47,90 @@ useSeoMeta({
 <template>
   <DocsLayoutHome>
 
-    <Desktop
-        style=""
-        :system-bar="{ enabled: false }"
-        :dock-bar="{ enabled: false }"
-        :windows="{ position: 'absolute' }"
-    >
+    <div class="owd-docs-container">
 
-      <DocsHeader/>
+      <div class="owd-docs-hero grid grid-flow-col gap-4 py-32">
+        <div class="flex flex-col place-content-center">
 
-      <div class="owd-docs-container">
+          <div class="text-6xl font-bold">
+            Build Your Web OS
+          </div>
+          <div class="text-2xl mt-6 mb-6 opacity-50" style="max-width: 600px;">
+            Learn how to bootstrap your Open Web Desktop project and install or create themes, plugins and applications.
+          </div>
 
-        <div class="owd-docs-hero grid grid-flow-col gap-4">
-          <div class="flex flex-col place-content-center">
-
-            <div class="text-6xl font-bold">
-              Build Your Web OS
-            </div>
-            <div class="text-2xl mt-6 mb-6 opacity-50" style="max-width: 600px;">
-              Learn how to bootstrap your Open Web Desktop project and install or create themes, plugins and applications.
-            </div>
-
-            <div class="flex flex-row gap-3 mb-10">
-              <div class="flex-col">
+          <div class="flex flex-row gap-3 mb-10">
+            <div class="flex-col">
+              <nuxt-link to="/docs/installation">
                 <Button
                     class="p-button--primary"
                     size="large" style="width: 160px;"
-                    href="/docs/getting-started"
                 >
                   Getting Started
                 </Button>
-              </div>
-              <div class="flex-col">
-                <Button
-                    size="large" style="width: 120px;"
-                    @click="launchDemoApp(0)"
-                >
-                  Demo
-                </Button>
-              </div>
+              </nuxt-link>
             </div>
-
-            <DocsHomeHeroFeature
-                v-for="feature of features"
-                v-bind="feature"
-                class="mt-4"
-            />
-
-          </div>
-          <div class="self-center text-right">
-
-            <div class="inline-block mt-3">
-              <Window
-                  style="position: relative;"
-                  :window="{ title: 'Hello World !', icon: 'uil:robot', config: {size: { width: 360, height: 'auto' } }}"
+            <div class="flex-col">
+              <Button
+                  size="large" style="width: 120px;"
+                  @click="launchDemoApp(0)"
               >
-                <img :src="helloWorldImage" alt="Hello World robot"/>
-              </Window>
+                Demo
+              </Button>
+            </div>
+          </div>
 
-              <div class="text-center w-full mt-4 opacity-60">
-                Robot by Rain Winther<br/>
-                <div class="-mt-1 opacity-60">
-                  <a href="https://rainwinther.itch.io" target="_blank">rainwinther.itch.io</a>
-                </div>
+          <DocsHomeHeroFeature
+              v-for="feature of features"
+              v-bind="feature"
+              class="mt-4"
+          />
+
+        </div>
+        <div class="self-center text-right">
+
+          <div class="inline-block mt-3">
+            <Window
+                style="position: relative;"
+                :window="{ title: 'Hello World !', icon: 'uil:robot', config: {size: { width: 360, height: 'auto' } }}"
+            >
+              <img :src="helloWorldImage" alt="Hello World robot"/>
+            </Window>
+
+            <div class="text-center w-full mt-4 opacity-60">
+              Robot by Rain Winther<br/>
+              <div class="-mt-1 opacity-60">
+                <a href="https://rainwinther.itch.io" target="_blank">rainwinther.itch.io</a>
               </div>
             </div>
-
           </div>
-        </div>
 
+        </div>
       </div>
 
-      <!--
+    </div>
 
-      <DocsDivider class="mb-16"/>
+    <!--
 
-      <DocsHomeBanner/>
+    <DocsDivider class="mb-16"/>
 
-      <DocsDivider class="my-16"/>
+    <DocsHomeBanner/>
 
-      <DocsHomeTech />
+    <DocsDivider class="my-16"/>
 
-      <DocsDivider class="my-16"/>
+    <DocsHomeTech />
 
-      <DocsHomeSponsors />
+    <DocsDivider class="my-16"/>
 
-      -->
+    <DocsHomeSponsors />
 
-      <DocsDivider class="my-16"/>
+    -->
 
-      <DocsHomeBanner/>
+    <DocsDivider class="my-16"/>
 
-      <DocsFooter class="mt-16"/>
+    <DocsHomeBanner/>
 
-    </Desktop>
+    <DocsFooter class="mt-16"/>
 
   </DocsLayoutHome>
 </template>
