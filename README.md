@@ -1,153 +1,45 @@
 <p align="center">
   <img width="160" height="160" src="https://avatars.githubusercontent.com/u/65117737?s=160&v=4" />
 </p>
-<h1 align="center">Open Web Desktop</h1>
+<h1 align="center">Docs Module</h1>
 <h3 align="center">
-  A framework for building web-based desktop experiences.
+  Docs Module for your Open Web Desktop client.
 </h3>
 
 ## Overview
-Open Web Desktop (OWD) is a framework designed to provide a simple environment for building web-based desktop experiences. It's built with Vue.js & TypeScript, and it leverages the extensible Nuxt.js architecture.
 
-[Check out the demo](https://owdproject.github.io/docs) of the `client` base repository, decked with a couple of modules.
+Easily embed the official Open Web Desktop documentation into your project.
 
-## Features
-- Open-source web desktop environment built with Nuxt.js
-- Fully extendable through themes, apps, and modules
-- Bundled with popular libraries like Pinia, VueUse, Mitt
-- Designed to make the most of the Nuxt.js ecosystem
-- Styled with PrimeVue and Tailwind for a consistent UI
-- Fully localizable with i18n support
+## Installation
 
-## Getting started
-Required software:
+Install the module with:
 
-- [Git](https://git-scm.com)
-- [Node](https://nodejs.org)
-
-When you are ready, bootstrap a new project by running:
 ```bash
-npm create owd
-```
-Once the process is complete, you can start to develop:
-```bash
-# Run the dev server with hot-reload
-npm run dev
-
-# Build for production
-npm run generate
+npm install @owdproject/docs
 ```
 
-## Modules
-Open Web Desktop projects can be extended with themes, plugins, and desktop apps — whether contributed by the community or created custom for your needs. Explore available modules at [topics/owd-modules](https://github.com/topics/owd-modules).
+## Usage
 
-### Install a new app
-You can simply install a new app with `npm install @owdproject/app-todo` or by cloning it into `./desktop/apps/app-todo`. Then, define the application in your project configuration.
+Define the module in your `nuxt.config.ts`:
 
-```typescript
-// owd.config.ts
-export default defineDesktopConfig({
-    apps: [
-        "@owdproject/app-about",
-        "@owdproject/app-todo",
+```ts
+export default defineNuxtConfig({
+    modules: [
+        // place it before /core
+        '@owdproject/docs',
+        '@owdproject/core'
     ]
 })
 ```
 
-## Themes
-Themes allow you to customize the look and feel of your Open Web Desktop instance.
-You can explore available themes, ranging from popular OS designs to fully custom creations, at [topics/owd-themes](https://github.com/topics/owd-themes).
+## Features
 
-### Install a new theme
-You can install a new theme by defining it as a Nuxt.js layer in `nuxt.config.ts`.  
-Themes can be loaded from a local path or directly from a GitHub repository.
+- Automatically sets up a `/docs` route with built-in documentation.
+- Uses PrimeVue for consistent theming across Open Web Desktop projects.
+- Fully customizable if you want to extend or override docs content.
+- No setup required — works out of the box with any Open Web Desktop theme.
+- Ideal for apps, templates, or themes that want to ship self-contained help.
 
-**1. Using a local theme:**
-
-Clone it first in a folder of your project like `./desktop/theme/theme-win95`.
-
-```bash
-git clone git@github.com:owdproject/theme-win95.git ./desktop/theme/theme-win95
-```
-
-Then specify the path theme in the `nuxt.config.ts` configuration:
-
-```typescript
-// nuxt.config.ts
-export default defineNuxtConfig({
-    modules: [
-        "@owdproject/core",
-    ],
-
-    extends: [
-        "./desktop/theme/theme-win95"
-    ],
-    
-    ...
-```
-
-**2. Using a theme from GitHub:**
-
-To use a theme directly specifying  a GitHub repository, use this format: `github:<username>/<repository>`:
-
-```typescript
-// nuxt.config.ts
-export default defineNuxtConfig({
-    modules: [
-        "@owdproject/core",
-    ],
-
-    extends: [
-        "github:owdproject/theme-gnome",
-        { install: true }
-    ],
-    
-    ...
-```
-
-## Contributing
-
-**Any contribution is welcome!** Open Web Desktop is built with Nuxt and follows a modular architecture, making it easy to contribute to the core codebase or create new modules, themes and desktop apps.
-
-### Local Development Setup
-
-If you'd like to contribute, here's how to set up your local development environment:
-
-**Prerequisites:**
-
-- [Git](https://git-scm.com)
-- [Node](https://nodejs.org)
-
-**Cloning the Repository:**
-
-To contribute, start by forking the Open Web Desktop client repository on GitHub.  
-Then, clone your fork using HTTPS or SSH:
-
-```bash
-# Clone using HTTPS
-git clone https://github.com/<your-username>/client.git
-
-# Clone using SSH
-git clone git@github.com:<your-username>/client.git
-```
-
-Once you have cloned the repository, navigate to the project folder.  
-Install the dependencies, then start the development server:
-
-```bash
-cd owd-client
-
-npm install
-npm run dev
-```
-
-This will launch Open Web Desktop in development mode, allowing you to test your changes and see them reflected in real-time.
-The dev server will be available at http://localhost:3000 by default.
-
-## Getting Involved
-
-Open Web Desktop is a vast project. The code has been totally rewritten and is now actively being developed, but your support is what makes it all possible. If you're enjoying it and want to see more, consider donating. Your contribution helps keep the project alive, add new features, and build a stronger community.
-
-### License
+## License
 
 Open Web Desktop is released under the [GNU General Public License v3](LICENSE).
