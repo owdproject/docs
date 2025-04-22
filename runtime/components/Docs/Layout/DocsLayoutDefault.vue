@@ -94,9 +94,9 @@ const sidebarTopItems = [
 
       <div class="owd-docs-container">
 
-        <div class="grid grid-cols-12">
+        <div class="grid grid-cols-12 pt-4">
 
-          <aside class="col-span-2 pt-6">
+          <aside class="col-span-2 pt-5">
 
             <nuxt-link v-for="item of menuTopItems" :to="item.to">
               <div>
@@ -146,7 +146,7 @@ const sidebarTopItems = [
             <slot v-if="post" :post="post" />
           </main>
 
-          <aside class="col-span-2 pt-6">
+          <aside class="col-span-2 pt-5">
 
             <slot name="sidebar" />
 

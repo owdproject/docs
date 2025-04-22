@@ -17,7 +17,7 @@ const menuItems = computed(() => {
   demoApps.forEach((app, index) => {
     commands.push({
       label: `Demo ${index + 1}`,
-      command: () => applicationManager.launchAppEntry(...app)
+      command: () => applicationManager.execAppCommand(...app)
     });
   });
 
@@ -36,7 +36,7 @@ function toggle(event: Event) {
 
         <div class="text-3xl opacity-50">
           A new way to shape digital spaces — for showcasing,<br />
-          exploring, and building full windowed experiences.
+          learning, and building full windowed experiences.
         </div>
 
       </div>

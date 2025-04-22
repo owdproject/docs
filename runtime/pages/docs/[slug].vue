@@ -19,8 +19,6 @@ defineProps<{
     <template v-slot="{ post }">
 
       <ContentRenderer
-          style="filter: grayscale(0.6) contrast(4);"
-          class="m-3"
           :value="post"
       />
 
