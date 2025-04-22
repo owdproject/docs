@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import {demoDesktopProps} from "../../../consts/constsDesktop";
+import {useRoute, useAsyncData} from "nuxt/app"
 
 const route = useRoute()
 
@@ -142,7 +143,7 @@ const sidebarTopItems = [
           </aside>
 
           <main class="col-span-8 flex-grow p-y-4 pl-12">
-            <slot :post="post" />
+            <slot v-if="post" :post="post" />
           </main>
 
           <aside class="col-span-2 pt-6">
@@ -201,10 +202,7 @@ a {
     height: 24px;
     margin-right: 5px;
     padding: 0;
-
-    &-outlined {
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-    }
+    vertical-align: middle;
   }
 }
 </style>
