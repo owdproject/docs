@@ -100,6 +100,21 @@ const sidebarTopItems = [
 
             <nuxt-link v-for="item of menuTopItems" :to="item.to">
               <div>
+                <Button label="Primary">
+                  <Icon :name="item.icon" :size="12" />
+                </Button>
+
+                {{item.label}}
+              </div>
+            </nuxt-link>
+
+            <Divider />
+
+            <nuxt-link
+                v-for="item of menuMainItems"
+                :to="item.to"
+            >
+              <div>
                 <Button label="Primary" variant="outlined">
                   <Icon :name="item.icon" :size="12" />
                 </Button>
@@ -108,29 +123,14 @@ const sidebarTopItems = [
               </div>
             </nuxt-link>
 
-            <Divider class="my-6" />
-
-            <nuxt-link
-                v-for="item of menuMainItems"
-                :to="item.to"
-            >
-              <div>
-                <Button label="Primary">
-                  <Icon :name="item.icon" :size="12" />
-                </Button>
-
-                {{item.label}}
-              </div>
-            </nuxt-link>
-
-            <Divider class="my-6" />
+            <Divider />
 
             <a
                 v-for="item of menuLearnItems"
                 :href="item.href" target="_blank"
             >
               <div>
-                <Button label="Primary">
+                <Button label="Primary" variant="outlined">
                   <Icon :name="item.icon" :size="12" />
                 </Button>
 
@@ -142,7 +142,7 @@ const sidebarTopItems = [
 
           </aside>
 
-          <main class="col-span-8 flex-grow p-y-4 pl-12">
+          <main class="owd-docs-content col-span-8 flex-grow p-y-4 pl-12">
             <slot v-if="post" :post="post" />
           </main>
 
@@ -150,14 +150,14 @@ const sidebarTopItems = [
 
             <slot name="sidebar" />
 
-            <Divider class="my-6" />
+            <Divider />
 
             <a
                 v-for="item of sidebarTopItems"
                 :href="item.href"
             >
               <div>
-                <Button label="Primary" variant="outlined">
+                <Button label="Primary">
                   <Icon :name="item.icon" :size="12" />
                 </Button>
 
@@ -165,11 +165,15 @@ const sidebarTopItems = [
               </div>
             </a>
 
-            <Divider class="my-6" />
+            <Divider />
 
             <div class="flex gap-3">
               <a href="https://github.com/owdproject" target="_blank">
                 <Icon name="simple-icons:github" style="vertical-align: 1px;" />
+              </a>
+
+              <a href="https://discord.gg/zPNaN2HAaA" target="_blank">
+                <Icon name="simple-icons:discord" :size="18" />
               </a>
 
               <a href="https://bluesky.app/profile/owdproject" target="_blank">
