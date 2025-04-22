@@ -6,9 +6,8 @@ import helloWorldImage from '../../assets/images/window-hello-world.gif';
 
 const applicationManager = useApplicationManager()
 
-function launchDemoApp(index: number = 0) {
-  const entry = applicationManager.appsEntries[index]
-  entry.application.execCommand(entry.command)
+function launchAboutDemoApp() {
+  applicationManager.launchAppEntry('org.owdproject.about', 'about')
 }
 
 const features = [
@@ -73,7 +72,7 @@ useSeoMeta({
             <div class="flex-col">
               <Button
                   size="large" style="width: 120px;"
-                  @click="launchDemoApp(0)"
+                  @click="launchAboutDemoApp()"
               >
                 Demo
               </Button>

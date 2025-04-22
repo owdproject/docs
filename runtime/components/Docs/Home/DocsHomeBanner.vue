@@ -6,43 +6,22 @@ import {useApplicationManager} from "@owdproject/core/runtime/composables/useApp
 const applicationManager = useApplicationManager()
 const menu = useTemplateRef('menu')
 
-function launchDemoApp(index: number = 0) {
-  const entry = applicationManager.appsEntries[index]
-  entry.application.execCommand(entry.command)
-}
+const demoApps = [
+  ['org.owdproject.todo', 'todo'],
+  ['org.owdproject.debug', 'debug'],
+  ['org.owdproject.wasmboy', 'wasmboy'],
+];
 
-function prepareDemoCommands() {
-  const demoCommands = [];
-  const startIndex = 1;
-  const maxItems = Math.min(3, applicationManager.appsEntries.length - startIndex);
+const menuItems = computed(() => {
+  const commands = [];
+  demoApps.forEach((app, index) => {
+    commands.push({
+      label: `Demo ${index + 1}`,
+      command: () => applicationManager.launchAppEntry(...app)
+    });
+  });
 
-  for (let i = 0; i < maxItems; i++) {
-    const index = startIndex + i;
-    const entry = applicationManager.appsEntries[index];
-    if (entry && entry.application && entry.command) {
-      demoCommands.push({
-        label: `Demo ${index}`,
-        command: () => launchDemoApp(index)
-      });
-    }
-  }
-
-  return demoCommands;
-}
-
-const items = computed(() => {
-  let items = []
-
-  if (applicationManager.appsEntries.length > 0) {
-    items = prepareDemoCommands()
-  }
-
-  return [
-    {
-      label: 'Examples',
-      items
-    }
-  ]
+  return commands;
 })
 
 function toggle(event: Event) {
@@ -69,7 +48,7 @@ function toggle(event: Event) {
         >
           <Icon name="mdi:apps" :size="24" />
         </Button>
-        <Menu ref="menu" id="overlay_menu" :model="items" :popup="true" />
+        <Menu ref="menu" id="overlay_menu" :model="menuItems" :popup="true" />
 
       </div>
     </div>
