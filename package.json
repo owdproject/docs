@@ -13,7 +13,7 @@
     "url": "https://github.com/dxlliv"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0",
+    "@nuxt/content": "^3.4.0",
     "nuxt-toc": "^2.7.2"
   }
 }
