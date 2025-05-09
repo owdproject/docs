@@ -1,5 +1,5 @@
 import {defineNuxtModule, createResolver, addComponentsDir, extendPages, addImportsDir, installModule} from '@nuxt/kit'
-import {registerTailwindPath} from "@owdproject/core/runtime/utils/utilsApp";
+import {registerTailwindPath} from "@owdproject/core/runtime/utils/utilApp";
 import { cpSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 
