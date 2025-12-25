@@ -2,8 +2,6 @@
 import {useSeoMeta} from "nuxt/app"
 import {useApplicationManager} from "@owdproject/core/runtime/composables/useApplicationManager"
 
-import helloWorldImage from '../../assets/images/window-hello-world.gif';
-
 const applicationManager = useApplicationManager()
 
 function launchDemoApp(index: number = 0) {
@@ -94,7 +92,7 @@ useSeoMeta({
                 style="position: relative;"
                 :window="{ title: 'Hello World !', icon: 'uil:robot', config: {size: { width: 360, height: 'auto' } }}"
             >
-              <img :src="helloWorldImage" alt="Hello World robot"/>
+              <img src="/images/window-hello-world.gif"/>
             </Window>
 
             <div class="text-center w-full mt-4 opacity-60">
