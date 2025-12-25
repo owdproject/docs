@@ -42,4 +42,4 @@ export default defineNuxtConfig({
 
 ## License
 
-Open Web Desktop is released under the [GNU General Public License v3](LICENSE).
+Open Web Desktop is released under the [MIT License](LICENSE).

@@ -5,10 +5,10 @@
 <template>
   <DocsDivider class="mt-16" />
 
-  <footer class="py-6 text-sm">
+  <footer class="py-6">
     <div class="owd-docs-container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
       <div class="text-center md:text-left">
-        Open Web Desktop is released under the GPL license.
+        Open Web Desktop is released under the MIT License.
       </div>
       <div class="text-center md:text-right">
         <ul class="flex items-center justify-center md:justify-end space-x-4">

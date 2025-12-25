@@ -7,13 +7,13 @@
     "type": "git",
     "url": "git+https://github.com/owdproject/docs.git"
   },
-  "license": "GPL-3.0-or-later",
+  "license": "MIT",
   "author": {
     "name": "dxlliv",
     "url": "https://github.com/dxlliv"
   },
   "dependencies": {
-    "@nuxt/content": "^3.4.0",
-    "nuxt-toc": "^2.7.2"
+    "@nuxt/content": "^3.7.0",
+    "zod-to-json-schema": "3.24.6"
   }
 }
