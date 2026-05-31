@@ -1,0 +1,13 @@
+// https://nuxt.com/docs/api/configuration/nuxt-config
+export default defineNuxtConfig({
+  modules: [
+    "@nuxt/content",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/scripts",
+    "@nuxt/test-utils"
+  ],
+  content: {
+    experimental: { nativeSqlite: true }
+  }
+})
