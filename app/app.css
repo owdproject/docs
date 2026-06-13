@@ -1,0 +1,221 @@
+/*
+ * Docs theme — light/dark aligned with Nuxt UI + Docus defaults.
+ * Playground panel tokens live in assets/css/tokens.css.
+ */
+
+@theme static {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Code', 'SF Mono', Menlo, monospace;
+
+  --color-green-50: #effdf5;
+  --color-green-100: #d9fbe8;
+  --color-green-200: #b3f5d1;
+  --color-green-300: #75edae;
+  --color-green-400: #00dc82;
+  --color-green-500: #00c16a;
+  --color-green-600: #00a155;
+  --color-green-700: #007f45;
+  --color-green-800: #016538;
+  --color-green-900: #0a5331;
+  --color-green-950: #052e16;
+
+  --color-zinc-50: #fafafa;
+  --color-zinc-100: #f4f4f5;
+  --color-zinc-200: #e4e4e7;
+  --color-zinc-300: #d4d4d8;
+  --color-zinc-400: #a1a1aa;
+  --color-zinc-500: #71717a;
+  --color-zinc-600: #52525b;
+  --color-zinc-700: #3f3f46;
+  --color-zinc-800: #27272a;
+  --color-zinc-900: #18181b;
+  --color-zinc-950: #09090b;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Light — Nuxt docs: clean white / zinc */
+:root,
+.light,
+html:not(.dark) {
+  --ui-primary: var(--ui-color-primary-600);
+}
+
+.light body,
+html:not(.dark) body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 193, 106, 0.05), transparent),
+    radial-gradient(circle at 100% 100%, rgba(0, 220, 130, 0.03), transparent 40%),
+    var(--ui-bg) !important;
+}
+
+.light header,
+html:not(.dark) header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Dark — custom zinc surfaces */
+.dark,
+html.dark {
+  --ui-bg: #0b0c10;
+  --ui-bg-elevated: #16171d;
+  --ui-border: rgba(255, 255, 255, 0.06);
+  --ui-primary: #00dc82;
+}
+
+.dark body,
+html.dark body {
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 220, 130, 0.1), transparent),
+    radial-gradient(circle at 0% 100%, rgba(0, 220, 130, 0.02), transparent 40%),
+    var(--ui-bg) !important;
+}
+
+.dark header,
+html.dark header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+  background: rgba(11, 12, 16, 0.8) !important;
+  backdrop-filter: blur(12px);
+}
+
+/* Card glassmorphism */
+.dark .hero-panel__window {
+  background: rgba(22, 23, 29, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.light .hero-panel__window {
+  background: #f8fafc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light .hero-panel__header {
+  background: #f1f5f9;
+}
+
+.light .hero-panel__content pre {
+  color: #1e293b;
+}
+
+.light .hero-panel__tabs button {
+  color: #64748b;
+}
+
+.light .hero-panel__tabs button.active {
+  background: rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+}
+
+[data-slot="features"] {
+  margin-top: 4rem;
+}
+
+[data-slot="features"] > * {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.dark [data-slot="features"] > *:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(0, 220, 130, 0.2);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+[data-slot="features"] [data-slot="icon"] {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(0, 220, 130, 0.1);
+  color: #00dc82;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+[data-page="index"] [data-slot="title"] {
+  font-size: 3.5rem;
+  line-height: 1.1;
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
+}
+
+[data-page="index"] [data-slot="description"] {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--ui-text-muted);
+  max-width: 32rem;
+}
+
+[data-page="index"] [data-slot="root"][data-orientation="horizontal"] {
+  align-items: start;
+}
+
+@media (max-width: 639px) {
+  [data-page="index"] [data-slot="root"][data-orientation="horizontal"] {
+    align-items: center;
+    text-align: center;
+  }
+
+  [data-page="index"] [data-slot="title"],
+  [data-page="index"] [data-slot="description"] {
+    text-align: center;
+  }
+
+  [data-page="index"] [data-slot="links"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  [data-page="index"] .hero-panel {
+    width: 100%;
+    max-width: 22rem;
+    margin-inline: auto;
+  }
+}
+
+[data-page="index"] .prose > :last-child {
+  margin-bottom: 0;
+}
+
+.docs-footer-line {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.6;
+  color: var(--ui-text-muted);
+  text-align: center;
+}
+
+.docs-footer-line a {
+  color: var(--ui-text-muted);
+  text-decoration: none;
+}
+
+.docs-footer-line a:hover {
+  color: var(--ui-primary);
+}
+
+.docs-footer-line .docs-footer-brand {
+  font-weight: 600;
+  color: var(--ui-text-highlighted);
+}
+
+.docs-footer-line .docs-footer-brand span {
+  color: var(--ui-primary);
+}

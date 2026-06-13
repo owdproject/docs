@@ -1,140 +1,173 @@
 ---
 seo:
-  title: Open Web Desktop — Documentation
-  description: Build a browser desktop from themes and Nuxt modules. Guides for core, kits, apps, package linking, and kernel contracts.
+  title: Open Web Desktop — The Desktop Engine for the Web
+  description: Build modular, beautiful, and highly functional browser-based desktop environments with Nuxt.
 ---
 
 ::u-page-hero
+---
+orientation: horizontal
+---
+::home-hero-panel
+::
+
 #title
-Open Web Desktop
+Build your [Web OS]{.text-primary}
 
 #description
-A modular **web desktop** framework: themes that look like different OS shells, apps as Nuxt modules, and an agnostic engine in **`@owdproject/core`**. Documentation for theme authors, app authors, and monorepo contributors.
+Open Web Desktop is a modular framework for Nuxt that transforms the browser into a powerful, multi-window desktop environment.
+
+
+::home-code-terminal
+::
 
 #links
   :::u-button
   ---
-  color: neutral
   size: xl
   to: /getting-started/introduction
   trailing-icon: i-lucide-arrow-right
   ---
-  Get started
+  Start the Journey
   :::
 
   :::u-button
   ---
   color: neutral
-  icon: i-lucide-link-2
+  icon: i-lucide-book-open
   size: xl
-  to: /setup/package-linking
-  variant: outline
+  to: /apps/overview
+  variant: ghost
   ---
-  Package linking
+  Explore Apps
   :::
 ::
 
 ::u-page-section
 #title
-What’s inside
+Why [Open Web Desktop]{.text-primary}?
+
+#description
+Standard web apps feel like pages. Desktop feels like a platform. It's built for developers who want to escape the "single-page" mentality.  
+ Create desktop ecosystems with a reactive engine, optional virtual file system, infinite integrations, and your favorite UI kit.
 
 #features
-  :::u-page-feature
-  ---
-  icon: i-lucide-book-open
-  ---
-  #title
-  Getting started
-  
-  #description
-  Run this docs site, client monorepo layout, and roadmap for themed **`/docs`** inside the desktop shell.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-link-2
-  ---
-  #title
-  Package linking
-  
-  #description
-  **npm** vs **`workspace:*`** vs **Git URLs** — avoid **`ERR_PNPM_WORKSPACE_PKG_NOT_FOUND`** when wiring themes and external modules.
-  :::
-
   :::u-page-feature
   ---
   icon: i-lucide-cpu
   ---
   #title
-  Core & kits
-  
+  Reactive Engine
   #description
-  Engine, **`kit-theme`** / **`kit-fs`**, external **`module-fs`**, and how themes stay swappable.
+  Central engine for windows, processes, and events. A clean reactive API to manage your entire desktop state.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-folder-tree
+  ---
+  #title
+  Virtual File System
+  #description
+  Optional VFS with drivers for local or remote storage. Manage files across all your applications seamlessly.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-terminal
+  ---
+  #title
+  Command Center
+  #description
+  Control your environment via CLI. Install apps, switch themes, and validate modules with a single command.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-component
+  ---
+  #title
+  Component Kits
+  #description
+  Use PrimeVue, Nuxt UI, or your own stack. Share logic and UI components between all your apps and themes.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-palette
+  ---
+  #title
+  Multi-Theme Shell
+  #description
+  Swap the entire desktop shell instantly. Create modern or classic UIs without touching any application logic.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-workflow
+  ---
+  #title
+  Dev Playground
+  #description
+  Every app has his standalone playground. Develop in isolation and publish to the Desktop ecosystem.
   :::
 ::
 
 ::u-page-section
 #title
-Developer guides
+Modular [Architecture]{.text-primary}
+
+#description
+Everything in Desktop is a module. Mix and match apps, themes, and system extensions.
 
 #features
   :::u-page-feature
   ---
-  to: /apps/overview
-  icon: i-lucide-app-window
+  icon: i-lucide-layers
+  to: /architecture/kits
   ---
   #title
-  Building an app
-  
+  1. The Core
   #description
-  Nuxt module, **`defineDesktopApp`**, windows, commands, playground, publish.
+  The engine that handles the heavy lifting.
   :::
 
   :::u-page-feature
   ---
+  icon: i-lucide-layout
   to: /themes/overview
-  icon: i-lucide-palette
   ---
   #title
-  Building a theme
-  
+  2. The Theme
   #description
-  **`defu`**, **`DesktopCore`**, dialog plugins, optional explorer modules.
+  Define how the taskbar, menu, and windows look.
   :::
 
   :::u-page-feature
   ---
-  to: /setup/desktop-config
-  icon: i-lucide-file-code
+  icon: i-lucide-package
+  to: /apps/overview
   ---
   #title
-  desktop.config.ts
-  
+  3. The Apps
   #description
-  Theme, apps, modules, shell keys, validation, and runtime merge semantics.
+  Register commands, windows, and logic in minutes.
   :::
+::
 
-  :::u-page-feature
-  ---
-  to: /internals/kernel-contract
-  icon: i-lucide-shield-check
-  ---
-  #title
-  Kernel contract
-  
-  #description
-  Public API surface for **core 3.3+** — components, stores, bootstrap order.
-  :::
+::u-page-section
+#title
+Ready to experiment?
 
-  :::u-page-feature
+#description
+Jump into the documentation and start building your first application in minutes.
+
+#links
+  :::u-button
   ---
-  to: /reference/glossary
-  icon: i-lucide-book-a
+  size: xl
+  to: /apps/create-from-scratch
   ---
-  #title
-  Glossary
-  
-  #description
-  Terminology and migration notes (**`Core*`** → **`Desktop*`**, explorer store move).
+  Create your first App
   :::
 ::
