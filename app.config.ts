@@ -88,4 +88,12 @@ export default defineAppConfig({
   socials: {
     github: 'https://github.com/owdproject/owd',
   },
+
+  ogImage: {
+    component: 'Docs',
+    props: {
+      primary: '#00dc82',
+      neutral: '#16171d',
+    }
+  },
 })

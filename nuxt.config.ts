@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     name: 'Open Web Desktop Docs'
   },
 
+  devtools: { enabled: true },
+
   modules: [
     "@nuxt/content",
     "@nuxt/image",
