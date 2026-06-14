@@ -51,6 +51,26 @@ export default defineAppConfig({
 
   header: {
     title: 'Open Web Desktop',
+    links: [
+      {
+        icon: 'i-lucide-package',
+        label: 'Apps',
+        to: 'https://github.com/topics/owd-apps',
+        target: '_blank'
+      },
+      {
+        icon: 'i-lucide-palette',
+        label: 'Themes',
+        to: 'https://github.com/topics/owd-themes',
+        target: '_blank'
+      },
+      {
+        icon: 'i-lucide-boxes',
+        label: 'Modules',
+        to: 'https://github.com/topics/owd-modules',
+        target: '_blank'
+      }
+    ]
   },
 
   seo: {

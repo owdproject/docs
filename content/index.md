@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Open Web Desktop — The Desktop Engine for the Web
-  description: Build modular, beautiful, and highly functional browser-based desktop environments with Nuxt.
+  title: Open Web Desktop — Build your Web OS
+  description: Web Desktop framework for Nuxt. Build modular, beautiful, and highly functional browser-based desktop environments with Vue.js
 ---
 
 ::u-page-hero

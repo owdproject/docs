@@ -68,7 +68,7 @@ html.dark {
   --ui-bg: #0b0c10;
   --ui-bg-elevated: #16171d;
   --ui-border: rgba(255, 255, 255, 0.06);
-  --ui-primary: #00dc82;
+  --ui-primary: #079b9b;
 }
 
 .dark body,
@@ -119,7 +119,7 @@ html.dark header {
   margin-top: 4rem;
 }
 
-[data-slot="features"] > * {
+[data-slot="features"]>* {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
@@ -127,7 +127,7 @@ html.dark header {
   transition: all 0.3s ease;
 }
 
-.dark [data-slot="features"] > *:hover {
+.dark [data-slot="features"]>*:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(0, 220, 130, 0.2);
   transform: translateY(-4px);
@@ -190,7 +190,7 @@ html.dark header {
   }
 }
 
-[data-page="index"] .prose > :last-child {
+[data-page="index"] .prose> :last-child {
   margin-bottom: 0;
 }
 

@@ -42,7 +42,7 @@ function copy() {
 }
 
 .code-terminal:hover {
-  border-color: rgba(0, 220, 130, 0.4);
+  border-color: #079b9b;
   background: #1e1e2e;
   transform: translateY(-2px);
 }
@@ -54,7 +54,7 @@ function copy() {
 }
 
 .prompt {
-  color: #00dc82;
+  color: grey;
   user-select: none;
 }
 
