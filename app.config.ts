@@ -80,13 +80,15 @@ export default defineAppConfig({
   },
 
   github: {
-    url: 'https://github.com/owdproject/owd',
+    owner: 'owdproject',
+    name: 'docs',
     branch: 'main',
     rootDir: 'docs',
+    url: 'https://github.com/owdproject/docs',
   },
 
   socials: {
-    github: 'https://github.com/owdproject/owd',
+    github: 'https://github.com/owdproject/client'
   },
 
   ogImage: {
