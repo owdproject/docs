@@ -1,6 +1,6 @@
 ---
 seo:
-  title: Build your Nuxt.js desktop — Open Web Desktop
+  title: Build your Nuxt desktop — Open Web Desktop
   description: Web Desktop framework for Nuxt. Build modular, beautiful, and highly functional browser-based desktop environments with Vue.js
 ---
 
@@ -12,10 +12,10 @@ orientation: horizontal
 ::
 
 #title
-Build your Web OS with  [Nuxt Desktop]{.text-primary}
+Build your Web OS. [Desktop]{.text-primary} for Nuxt
 
 #description
-Open Web Desktop is a modular environment for building desktops with Nuxt.js, allowing you to create immersive desktop experiences and windowed digital gardens. Bootstrap yours in seconds!
+Open Web Desktop (OWD) is an open-source framework for Nuxt.js used to build web-based operating systems and interactive, window-driven desktop experiences directly inside a web browser
 
 
 ::home-code-terminal
