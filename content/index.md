@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Build your Nuxt desktop — Open Web Desktop
-  description: Web Desktop framework for Nuxt. Build modular, beautiful, and highly functional browser-based desktop environments with Vue.js
+  title: Build your Nuxt desktop
+  description: Build modular, highly functional browser-based desktop environments with Vue.js and Nuxt. The open-source framework for window-driven web apps
 ---
 
 ::u-page-hero
@@ -15,7 +15,7 @@ orientation: horizontal
 Build your Web OS. [Desktop]{.text-primary} for Nuxt
 
 #description
-Open Web Desktop is a modular framework built on top of Nuxt.js, used to create web-based operating systems and window-driven desktop experiences directly inside a web browser.
+Open Web Desktop is a modular framework built on top of Nuxt.js, used to create web-based desktops and window-driven experiences.
 
 
 ::home-code-terminal
@@ -118,29 +118,28 @@ Standard web apps feel like pages. Desktop feels like a platform. It's built for
 Modular [Architecture]{.text-primary}
 
 #description
-Everything in Desktop is a Nuxt module. Mix and match apps, themes, and system extensions.
+Everything in Open Web Desktop is a decoupled Nuxt module running on top of a central kernel.
 
 #features
-  :::u-page-feature
-  ---
-  icon: i-lucide-layers
-  to: /architecture/kits
-  ---
-  #title
-  1. The Core
-  #description
-  The engine that handles the heavy lifting.
-  :::
-
   :::u-page-feature
   ---
   icon: i-lucide-layout
   to: /themes/overview
   ---
   #title
-  2. The Theme
+  1. Custom Themes
   #description
-  Define how the taskbar, menu, and windows look.
+  The visual shell of your desktop. Defines the taskbar, launcher, dock, and window chrome, letting you swap environments without changing app code.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-puzzle
+  ---
+  #title
+  2. Flexible Modules
+  #description
+  System-level extensions that plug into the core boot flow to add features like virtual filesystems (VFS) or IndexedDB persistence.
   :::
 
   :::u-page-feature
@@ -149,9 +148,48 @@ Everything in Desktop is a Nuxt module. Mix and match apps, themes, and system e
   to: /apps/overview
   ---
   #title
-  3. The Apps
+  3. Isolated Apps
   #description
-  Register commands, windows, and logic in minutes.
+  Decoupled Vue 3 programs with encapsulated Pinia states that automatically unmount their DOM when minimized to free system memory.
+  :::
+::
+
+::u-page-section
+#title
+Built for the [Modern Web]{.text-primary}
+
+#description
+OWD provides a robust, maintainable architecture for projects that need to feel like platforms, not just pages.
+
+#features
+  :::u-page-feature
+  ---
+  icon: i-lucide-terminal
+  ---
+  #title
+  Next-Gen Portfolios
+  #description
+  Create interactive Web OS portfolios and swap themes instantly without changing a single line of app code.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-book-open
+  ---
+  #title
+  Digital Gardens
+  #description
+  Organize your personal notes, widgets, and utilities inside a clean, customizable window-driven workspace.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-layers
+  ---
+  #title
+  Micro-Frontend SaaS
+  #description
+  Deploy complex, window-based SaaS dashboards where features run in completely isolated modules.
   :::
 ::
 
@@ -166,8 +204,8 @@ Jump into the documentation and start building your first application in minutes
   :::u-button
   ---
   size: xl
-  to: /apps/create-from-scratch
+  to: /getting-started/introduction
   ---
-  Create your first App
+  Start the Journey
   :::
 ::

@@ -29,6 +29,6 @@ const year = new Date().getFullYear()
       href="https://github.com/sponsors/owdproject"
       target="_blank"
       rel="noopener noreferrer"
-    >Sponsors</a>
+    >Support</a>
   </p>
 </template>
