@@ -15,7 +15,7 @@ orientation: horizontal
 Build your Web OS. [Desktop]{.text-primary} for Nuxt
 
 #description
-Open Web Desktop (OWD) is an open-source framework for Nuxt.js used to build web-based operating systems, and interactive, window-driven desktop experiences directly inside a web browser.
+Open Web Desktop is a modular framework built on top of Nuxt.js, used to create web-based operating systems and window-driven desktop experiences directly inside a web browser.
 
 
 ::home-code-terminal
