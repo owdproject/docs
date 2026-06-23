@@ -3,7 +3,8 @@
   "description": "Standalone developer documentation for Open Web Desktop (client, apps, themes).",
   "scripts": {
     "dev": "nuxt dev --extends docus",
-    "build": "nuxt build --extends docus"
+    "build": "nuxt build --extends docus",
+    "generate": "nuxt generate --extends docus"
   },
   "dependencies": {
     "@nuxt/image": "1.11.0",

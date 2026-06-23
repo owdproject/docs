@@ -5,7 +5,7 @@ export default defineNuxtConfig({
 
   site: {
     url: 'https://owdproject.org',
-    name: 'Open Web Desktop Docs'
+    name: 'Open Web Desktop'
   },
 
   devtools: { enabled: true },

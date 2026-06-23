@@ -74,7 +74,7 @@ export default defineAppConfig({
   },
 
   seo: {
-    title: 'Open Web Desktop Docs',
+    title: 'Open Web Desktop',
     titleTemplate: '%s · OWD',
     description: 'Standalone developer documentation for Open Web Desktop (client, apps, themes).',
   },
