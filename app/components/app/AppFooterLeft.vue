@@ -17,13 +17,7 @@ const year = new Date().getFullYear()
       href="https://github.com/owdproject/client"
       target="_blank"
       rel="noopener noreferrer"
-    >GitHub</a>
-    ·
-    <a
-      href="https://github.com/orgs/owdproject/discussions"
-      target="_blank"
-      rel="noopener noreferrer"
-    >Discussions</a>
+    >Get it now</a>
     ·
     <a
       href="https://github.com/sponsors/owdproject"

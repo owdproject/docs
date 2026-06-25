@@ -12,7 +12,7 @@ orientation: horizontal
 ::
 
 #title
-Build your Web OS. [Desktop]{.text-primary} for Nuxt
+Build your [Desktop]{.text-primary} for Nuxt in seconds
 
 #description
 Open Web Desktop is a modular framework built on top of Nuxt.js, used to create web-based desktops and window-driven experiences.
