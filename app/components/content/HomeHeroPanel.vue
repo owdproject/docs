@@ -2,8 +2,8 @@
 const activeWindow = ref('code') // 'code' | 'terminal'
 
 const configCode = `export default defineDesktopConfig({
-  theme: '@owdproject/theme-paper',
-  apps: ['@owdproject/app-terminal', '@owdproject/app-youtube'],
+  theme: '@owdproject/theme-nuxt-paper',
+  apps: ['@owdproject/app-nuxt-terminal', '@owdproject/app-youtube'],
 })`
 
 const terminalLine = ref('pnpm desktop dev')
