@@ -1,3 +1,5 @@
+import legacyRoutes from './config/legacy-routes.json'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   extends: ['docus'],
@@ -7,6 +9,13 @@ export default defineNuxtConfig({
     url: 'https://owdproject.org',
     name: 'Open Web Desktop'
   },
+
+  routeRules: Object.fromEntries(
+    Object.entries(legacyRoutes).map(([from, to]) => [from, { redirect: to }]),
+  ),
+  nitro: { prerender: { routes: [...Object.keys(legacyRoutes), ...Object.values(legacyRoutes)] } },
+
+  llms: { domain: 'https://owdproject.org' },
 
   devtools: { enabled: true },
 
@@ -20,8 +29,4 @@ export default defineNuxtConfig({
   content: {
     experimental: { nativeSqlite: true }
   },
-  css: [
-    './app/assets/css/tokens.css',
-    './app/assets/css/panel.css'
-  ]
 })

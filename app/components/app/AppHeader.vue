@@ -7,8 +7,7 @@ const { isEnabled, locales } = useDocusI18n()
 const { subNavigationMode } = useSubNavigation()
 
 const links = computed(() => {
-  // Header icon should link to the main client repo, not the docs repo (github.url).
-  const githubLink = appConfig.socials?.github ?? 'https://github.com/owdproject/client'
+  const githubLink = appConfig.socials?.github ?? 'https://github.com/owdproject'
   return [
     {
       'icon': 'i-simple-icons-github',
@@ -66,6 +65,7 @@ const links = computed(() => {
       <template v-if="links?.length">
         <UButton
           v-for="(link, index) of links"
+          class="hidden sm:inline-flex"
           :key="index"
           v-bind="{ color: 'neutral', variant: 'ghost', ...link }"
         />

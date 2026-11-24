@@ -1,101 +1,36 @@
 export default defineAppConfig({
   ui: {
-    colors: {
-      primary: 'green',
-      neutral: 'zinc',
+    colors: { primary: 'cyan', neutral: 'stone' },
+    contentNavigation: {
+      slots: { linkTrailing: 'flex' },
     },
-    button: {
-      defaultVariants: {
-        color: 'primary',
-      },
-    },
-    header: {
-      slots: {
-        root: 'border-b border-default bg-elevated/90 backdrop-blur-md',
-      },
-    },
-    footer: {
-      slots: {
-        root: 'border-t border-default',
-      },
-    },
-    page: {
-      slots: {
-        root: 'gap-y-8',
-      },
-    },
-    pageHero: {
-      slots: {
-        title: 'text-4xl sm:text-5xl font-bold tracking-tight text-balance',
-        description: 'text-lg text-muted text-balance',
-      },
-    },
-    pageSection: {
-      slots: {
-        title: 'text-2xl sm:text-3xl font-bold tracking-tight text-balance',
-        description: 'text-base text-muted text-balance',
-      },
-    },
-    pageCard: {
-      slots: {
-        root: 'ring ring-default bg-elevated/60',
-      },
+    pageBody: {
+      base: 'owd-docs-article mt-8 pb-24',
     },
   },
 
-  docus: {},
+  navigation: { sub: 'aside' },
 
-  navigation: {
-    sub: 'aside',
-  },
-
-  header: {
-    title: 'Open Web Desktop',
-    links: [
-      {
-        icon: 'i-lucide-package',
-        label: 'Apps',
-        to: 'https://github.com/topics/owd-apps',
-        target: '_blank'
-      },
-      {
-        icon: 'i-lucide-palette',
-        label: 'Themes',
-        to: 'https://github.com/topics/owd-themes',
-        target: '_blank'
-      },
-      {
-        icon: 'i-lucide-boxes',
-        label: 'Modules',
-        to: 'https://github.com/topics/owd-modules',
-        target: '_blank'
-      }
-    ]
-  },
+  header: { title: 'Open Web Desktop' },
 
   seo: {
     title: 'Open Web Desktop',
     titleTemplate: '%s · OWD',
-    description: 'Standalone developer documentation for Open Web Desktop (client, apps, themes).',
+    description: 'Developer documentation for the Open Web Desktop engine, adapters and starters.',
   },
 
   github: {
     owner: 'owdproject',
     name: 'docs',
     branch: 'main',
-    rootDir: 'docs',
+    rootDir: '',
     url: 'https://github.com/owdproject/docs',
   },
 
-  socials: {
-    github: 'https://github.com/owdproject/client'
-  },
+  socials: { github: 'https://github.com/owdproject' },
 
   ogImage: {
     component: 'Docs',
-    props: {
-      primary: '#00dc82',
-      neutral: '#16171d',
-    }
+    props: { primary: '#73d6e7', neutral: '#121212' },
   },
 })
